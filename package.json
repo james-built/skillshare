@@ -1,0 +1,9 @@
+{
+  "name": "skillshare",
+  "version": "1.0.0",
+  "description": "A skills sharing & project collaboration platform",
+  "main": "index.js",
+  "repository": "https://github.com/james-built/skillshare.git",
+  "author": "james-built <jgbuilt@gmail.com>",
+  "license": "MIT"
+}
