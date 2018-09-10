@@ -1,0 +1,15 @@
+.homepage.info {
+  display: flex;
+}
+
+.homepage.summary {
+  
+}
+
+.homepage.buttons {
+  display: flex;
+}
+
+.homepage.buttons#sign-in {
+  width: 30%
+}
