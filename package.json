@@ -13,18 +13,19 @@
   },
   "babel": {
     "presets": [
-      "env",
-      "react"
+      "@babel/env",
+      "@babel/react"
     ]
   },
   "dependencies": {
     "express": "^4.16.3"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "jest": "^23.5.0",
