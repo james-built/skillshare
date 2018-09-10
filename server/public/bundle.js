@@ -100,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _Homepage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Homepage */ "./client/components/Homepage.jsx");
-/* harmony import */ var _ProfilePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProfilePage */ "./client/components/ProfilePage.jsx");
+/* harmony import */ var _ProfilePage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProfilePage */ "./client/components/ProfilePage.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -145,7 +145,7 @@ function (_React$Component) {
         component: _Homepage__WEBPACK_IMPORTED_MODULE_2__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/profile",
-        component: _ProfilePage__WEBPACK_IMPORTED_MODULE_4__["default"]
+        component: _ProfilePage__WEBPACK_IMPORTED_MODULE_3__["default"]
       })))) // <Homepage />
       ;
     }
@@ -193,7 +193,12 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
  // Components
 
 
+ // Styles
 
+var homepagePicture = {
+  height: 460,
+  width: '100%'
+};
 
 var Homepage =
 /*#__PURE__*/
@@ -210,12 +215,21 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://fillmurray.com/300/300"
+        style: homepagePicture,
+        src: "https://via.placeholder.com/375x460"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "homepage info"
+        style: {
+          display: 'flex'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "homepage summary"
-      }, "Summary for the frontpage goes here, describes suff and things."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Userbox__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Signupbox__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+        style: {
+          flexGrow: 2
+        }
+      }, "Where ideas meet execution.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Find the complement to your skillset to help bring your vision to reality.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Apply your skills to real world projects to grow & develop."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Userbox__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        style: {
+          flexGrow: 1
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Signupbox__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -316,8 +330,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+ // Components
 
+ // Styles
 
+var profileImage = {
+  display: 'block',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  width: '30%'
+};
 
 var UserProfile =
 /*#__PURE__*/
@@ -336,10 +358,14 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: profileImage,
+        src: "https://via.placeholder.com/200x200",
         alt: "profile image"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Profile Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "pageHeader"
+      }, "Profile Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -362,13 +388,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Signupbox; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
+ // Styles
+
+var buttons = {
+  display: 'flex',
+  justifyContent: 'space-evenly',
+  alignItems: 'flex-end'
+};
 function Signupbox() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "homepage buttons"
+    style: buttons
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/profile"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "sign-in"
-  }, "sign-in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "sign-in")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "register"
   }, "register"));
 }
