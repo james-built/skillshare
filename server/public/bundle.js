@@ -281,16 +281,13 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "row",
         style: homepagePicture,
         src: "https://via.placeholder.com/375x460"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          display: 'flex'
-        }
+        className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        style: {
-          flexGrow: 2
-        }
+        className: "col-sm"
       }, "Where ideas meet execution.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Find the complement to your skillset to help bring your vision to reality.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Apply your skills to real world projects to grow & develop."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Userbox__WEBPACK_IMPORTED_MODULE_1__["default"], {
         style: {
           flexGrow: 1
@@ -354,7 +351,7 @@ function (_React$Component) {
     value: function render() {
       return (// this will popup the site nav menu
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "nav"
+          className: "row nav"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Navigate"))
       );
     }
@@ -465,22 +462,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
- // Styles
 
-var buttons = {
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  alignItems: 'flex-end'
-};
 function Signupbox() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: buttons
+    className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/user/profile"
+    to: "/user/profile",
+    className: "col-sm"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "sign-in"
   }, "sign-in")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    id: "register"
+    id: "register",
+    className: "col-sm"
   }, "register"));
 }
 
@@ -563,7 +556,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Userbox() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "userbox container"
+    className: "col-sm"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "gallery of users goes here"));
 }
 
