@@ -5,10 +5,12 @@ import Nav from './Nav'
 
 // Styles
 const profileImage = {
+  backgroundImage: "url('https://via.placeholder.com/200x200')",
   display: 'block',
   marginLeft: 'auto',
   marginRight: 'auto',
-  width: '30%'
+  width: '30%',
+  borderRadius: '50%'
 }
 
 export default class UserProfile extends React.Component {
@@ -19,8 +21,34 @@ export default class UserProfile extends React.Component {
           <img style={profileImage} src="https://via.placeholder.com/200x200" alt="profile image"/>
           <h2 className="pageHeader">Profile Name</h2>
         </div>
-        <div className="profile body">
-          <p>
+        <div className="textBox">
+          <p className="textScroll">
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
+            body text for the profile here multiple lines of text
             body text for the profile here multiple lines of text
             body text for the profile here multiple lines of text
             body text for the profile here multiple lines of text
@@ -43,7 +71,7 @@ export default class UserProfile extends React.Component {
             body text for the profile here multiple lines of text
           </p>
         </div>
-        <Nav />
+        <Nav className="nav"/>
       </div>
     )
   }

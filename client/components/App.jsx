@@ -4,6 +4,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 // Components
 import Homepage from './Homepage'
 import ProfilePage from './ProfilePage'
+import UserHomepage from './UserHomepage'
 
 export default class App extends React.Component {
   render () {
@@ -12,7 +13,8 @@ export default class App extends React.Component {
         <Router>
           <div>
             <Route exact path="/" component={Homepage} />
-            <Route path="/profile" component={ProfilePage} />
+            <Route path="/user/profile" component={ProfilePage} />
+            <Route path="/user/home" component={UserHomepage} />
           </div>
         </Router>
       </div>

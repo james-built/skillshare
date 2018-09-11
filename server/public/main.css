@@ -2,3 +2,16 @@
 .pageHeader {
   text-align: center;
 }
+
+.textBox {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.textScroll {
+}
+
+.nav{
+  position: absolute;
+  bottom: 0;
+}

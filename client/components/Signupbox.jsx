@@ -11,7 +11,7 @@ const buttons = {
 export default function Signupbox () {
   return (
     <div style={buttons}>
-      <Link to='/profile'><button id="sign-in">sign-in</button></Link>
+      <Link to='/user/profile'><button id="sign-in">sign-in</button></Link>
       <button id="register">register</button>
     </div>
   )
