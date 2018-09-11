@@ -13,7 +13,7 @@ const homepagePicture = {
 export default class Homepage extends React.Component {
   render () {
     return (
-      <div>
+      <div className="container">
         <img style={homepagePicture} src="https://via.placeholder.com/375x460"/>
         <div style={{display: 'flex'}}>
           <p style={{flexGrow: 2}}>

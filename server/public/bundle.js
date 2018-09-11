@@ -278,7 +278,9 @@ function (_React$Component) {
   _createClass(Homepage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         style: homepagePicture,
         src: "https://via.placeholder.com/375x460"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -351,7 +353,9 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return (// this will popup the site nav menu
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Navigate")
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "nav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Navigate"))
       );
     }
   }]);
@@ -431,9 +435,10 @@ function (_React$Component) {
         className: "pageHeader"
       }, "Profile Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "textBox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "textScroll"
-      }, "body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text body text for the profile here multiple lines of text")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "PCB design"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Welding"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "UX design"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Engineering")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A picture of a project they worked on:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg",
+        alt: "uploaded picture"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
         className: "nav"
       }));
     }
@@ -532,9 +537,7 @@ function (_React$Component) {
   _createClass(UserHomepage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        className: "nav"
-      }));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 

@@ -4,7 +4,9 @@ export default class Nav extends React.Component {
   render () {
     return (
       // this will popup the site nav menu
-      <button>Navigate</button>
+      <div className="nav">
+        <button>Navigate</button>
+      </div>
     )
   }
 }

@@ -3,8 +3,12 @@
   text-align: center;
 }
 
+.profile.header {
+  position: sticky;
+}
+
 .textBox {
-  max-height: 300px;
+  max-height: 70%;
   overflow: auto;
 }
 

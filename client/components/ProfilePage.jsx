@@ -22,54 +22,24 @@ export default class UserProfile extends React.Component {
           <h2 className="pageHeader">Profile Name</h2>
         </div>
         <div className="textBox">
-          <p className="textScroll">
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-            body text for the profile here multiple lines of text
-          </p>
+          <p>Some skills that they have:</p>
+
+          <ul>
+            <li>PCB design</li>
+            <li>Welding</li>
+            <li>UX design</li>
+            <li>Engineering</li>
+          </ul>
+          <p>A picture of a project they worked on:</p>
+          <img src="http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg" alt="uploaded picture"/>
+          <p>A list of some of their equipment:</p>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
         <Nav className="nav"/>
       </div>

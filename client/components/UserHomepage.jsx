@@ -9,7 +9,7 @@ export default class UserHomepage extends React.Component {
     return (
       <div>
         <Header />
-        <Nav className="nav" />
+        <Nav />
       </div>
     )
   }
