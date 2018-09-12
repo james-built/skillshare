@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Homepage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Homepage */ "./client/components/Homepage.jsx");
 /* harmony import */ var _ProfilePage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProfilePage */ "./client/components/ProfilePage.jsx");
 /* harmony import */ var _UserHomepage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UserHomepage */ "./client/components/UserHomepage.jsx");
-/* harmony import */ var _UserSignup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UserSignup */ "./client/components/UserSignup.jsx");
+/* harmony import */ var _UserRegistration__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./UserRegistration */ "./client/components/UserRegistration.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -148,8 +148,8 @@ function (_React$Component) {
         path: "/",
         component: _Homepage__WEBPACK_IMPORTED_MODULE_2__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/user/signup",
-        component: _UserSignup__WEBPACK_IMPORTED_MODULE_5__["default"]
+        path: "/user/register",
+        component: _UserRegistration__WEBPACK_IMPORTED_MODULE_6__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/user/profile/:id",
         component: _ProfilePage__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -265,7 +265,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var homepagePicture = {
   height: 460,
-  width: '100%'
+  width: '100%',
+  fontFamily: 'Alfa Slab One, cursive',
+  fontSize: '2rem',
+  color: 'white'
 };
 
 var Homepage =
@@ -282,10 +285,12 @@ function (_React$Component) {
   _createClass(Homepage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "img-fluid homepageImage",
         style: homepagePicture
-      }, "Skill Share"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: ""
+      }, "Skill Share")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
@@ -404,23 +409,53 @@ var profileImage = {
   marginLeft: 'auto',
   marginRight: 'auto',
   width: '30%',
-  borderRadius: '50%'
+  borderRadius: '50%' // Demo data
+
 };
+var demoUsers = [{
+  id: 1,
+  name: "Tim",
+  skill: "Drone Pilot",
+  profilePic: "https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg"
+}, {
+  id: 2,
+  name: "Sarah",
+  skill: "Circuitry Design",
+  profilePic: "https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg"
+}, {
+  id: 3,
+  name: "Angela",
+  skill: "CAD",
+  profilePic: "https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg"
+}, {
+  id: 4,
+  name: "Paul",
+  skill: "Carpentry",
+  profilePic: "https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg"
+}];
 
 var UserProfile =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(UserProfile, _React$Component);
 
-  function UserProfile() {
+  function UserProfile(props) {
+    var _this;
+
     _classCallCheck(this, UserProfile);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(UserProfile).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserProfile).call(this, props)); //This state will be filled with the user data from API call
+
+    var selectedUser = _this.props.match.params.id;
+    demoUsers.map(function (selectedUser) {});
+    _this.state = {};
+    return _this;
   }
 
   _createClass(UserProfile, [{
     key: "render",
     value: function render() {
+      console.log(this.state);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -431,7 +466,7 @@ function (_React$Component) {
         alt: "profile image"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "pageHeader"
-      }, "James Dev")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pre-scrollable",
         style: {
           height: "85%"
@@ -475,13 +510,13 @@ function Signupbox() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/user/profile"
+    to: "/user/home"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "phone button"
   }, "sign-in"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/user/signup"
+    to: "/user/register"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "register",
     className: "phone button"
@@ -701,10 +736,10 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./client/components/UserSignup.jsx":
-/*!******************************************!*\
-  !*** ./client/components/UserSignup.jsx ***!
-  \******************************************/
+/***/ "./client/components/UserRegistration.jsx":
+/*!************************************************!*\
+  !*** ./client/components/UserRegistration.jsx ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

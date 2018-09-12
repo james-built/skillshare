@@ -5,7 +5,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import Homepage from './Homepage'
 import ProfilePage from './ProfilePage'
 import UserHomepage from './UserHomepage'
-import UserSignup from './UserSignup'
+import UserRegistration from './UserRegistration'
 
 export default class App extends React.Component {
   render () {
@@ -14,7 +14,7 @@ export default class App extends React.Component {
         <Router>
           <div>
             <Route exact path="/" component={Homepage} />
-            <Route path="/user/signup" component={UserSignup} />
+            <Route path="/user/register" component={UserRegistration} />
             <Route path="/user/profile/:id" component={ProfilePage} />
             <Route path="/user/home" component={UserHomepage} />
           </div>
