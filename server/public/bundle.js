@@ -151,7 +151,7 @@ function (_React$Component) {
         path: "/user/signup",
         component: _UserSignup__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        path: "/user/profile",
+        path: "/user/profile/:id",
         component: _ProfilePage__WEBPACK_IMPORTED_MODULE_3__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/user/home",
@@ -282,11 +282,10 @@ function (_React$Component) {
   _createClass(Homepage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "img-fluid",
-        style: homepagePicture,
-        src: "https://via.placeholder.com/375x460"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "img-fluid homepageImage",
+        style: homepagePicture
+      }, "Skill Share"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
@@ -472,7 +471,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Signupbox() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row"
+    className: "row fixed-bottom"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -481,10 +480,12 @@ function Signupbox() {
     className: "phone button"
   }, "sign-in"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/user/signup"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "register",
     className: "phone button"
-  }, "register")));
+  }, "register"))));
 }
 
 /***/ }),
@@ -501,7 +502,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return UserBox; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _UserCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserCard */ "./client/components/UserCard.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _UserCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserCard */ "./client/components/UserCard.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -520,6 +522,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+
  // Components
 
 
@@ -534,47 +537,57 @@ function (_React$Component) {
 
     _classCallCheck(this, UserBox);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserBox).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserBox).call(this, props)); //This state will be filled with a selection of random users from database
+
     _this.state = {
       demoUsers: [{
+        id: 1,
         name: "Tim",
         skill: "Drone Pilot",
-        profilePic: ""
+        profilePic: "https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg"
       }, {
+        id: 2,
         name: "Sarah",
         skill: "Circuitry Design",
-        profilePic: ""
+        profilePic: "https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg"
+      }, {
+        id: 3,
+        name: "Angela",
+        skill: "CAD",
+        profilePic: "https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg"
+      }, {
+        id: 4,
+        name: "Paul",
+        skill: "Carpentry",
+        profilePic: "https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg"
       }]
     };
     return _this;
-  }
+  } // Add a function to get random selection of users
+
 
   _createClass(UserBox, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pre-scrollable"
       }, this.state.demoUsers.map(function (user) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/user/profile/".concat(user.id)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          key: user.id,
           name: user.name,
           skill: user.skill,
           profilePic: user.profilePic
-        });
-      }));
+        }));
+      })));
     }
   }]);
 
   return UserBox;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // export default function Userbox () {
-//   return (
-//     <div className="col-6">
-//     {this.state.demoUsers.map((user) => {
-//       <UserCard name={user.name} skill={user.skill} profilePic={user.profilePic} />
-//     })}
-//     </div>
-//   )
-// }
-
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
 
@@ -597,13 +610,14 @@ var UserCard = function UserCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "card-img"
+    className: "card-img",
+    src: props.profilePic
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    class: "card-title"
+    className: "card-title"
   }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    class: "card-text"
+    className: "card-text"
   }, props.skill)));
 };
 

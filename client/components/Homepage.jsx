@@ -14,7 +14,7 @@ export default class Homepage extends React.Component {
   render () {
     return (
       <div>
-        <img className="img-fluid" style={homepagePicture} src="https://via.placeholder.com/375x460"/>
+        <p className="img-fluid homepageImage" style={homepagePicture}>Skill Share</p>
         <div className="container">
           <div className="row">
             <p className="col-6">
