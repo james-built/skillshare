@@ -8,7 +8,7 @@ import Signupbox from './Signupbox'
 const homepagePicture = {
   height: 460,
   width: '100%',
-  fontFamily: 'Alfa Slab One, cursive',
+  fontFamily: 'Black Ops One, cursive',
   fontSize: '2rem',
   color: 'white'
 }

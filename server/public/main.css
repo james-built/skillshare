@@ -1,15 +1,25 @@
 /*General styles*/
+body {
+  background-color: rgba(200, 171, 131, 0.87);
+  font-family: 'Open Sans', sans-serif;
+}
 .pageHeader {
   text-align: center;
 }
 
 .profile_header {
   position: sticky;
-  background-color: aquamarine;
+  background: #CACAAA;
 }
 
 .textBox {
   max-height: 70%;
+}
+
+.colorButton {
+  background-color: rgba(100, 147, 153, 0.877);
+  color: black;
+  width: 100%;
 }
 
 /* sets the max width of the form container */
@@ -19,12 +29,9 @@
 
 .nav{
 height: 50px;
-background-image: linear-gradient(to bottom right, rgba(77, 77, 196, 0.904), rgba(50, 50, 50, 0.8))
+background-color: #CACAAA;
 }
 
-.phone.button {
-  width: 100%
-}
 
 /* Image styles */
 .homepageImage {
@@ -33,6 +40,6 @@ background-image: linear-gradient(to bottom right, rgba(77, 77, 196, 0.904), rgb
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
   ),
-  url(https://i1.wp.com/www.eclectictrends.com/wp-content/uploads/2016/07/todmclellan.jpg?resize=620%2C775);
+  url(http://www.eclectictrends.com/wp-content/uploads/2016/07/jim-golden-studio.jpg);
   background-size: auto
 }
