@@ -282,17 +282,17 @@ function (_React$Component) {
   _createClass(Homepage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "row",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "img-fluid",
         style: homepagePicture,
         src: "https://via.placeholder.com/375x460"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "col-6"
-      }, "Where ideas meet execution.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Find the complement to your skillset to help bring your vision to reality.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Apply your skills to real world projects to grow & develop."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserBox__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Signupbox__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      }, "Where ideas meet execution.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Find the complement to your skillset to help bring your vision to reality.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Apply your skills to real world projects to grow & develop."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserBox__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Signupbox__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
     }
   }]);
 
@@ -351,7 +351,7 @@ function (_React$Component) {
     value: function render() {
       return (// this will popup the site nav menu
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "row nav"
+          className: "fixed-bottom nav justify-content-center"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Navigate"))
       );
     }
@@ -422,22 +422,29 @@ function (_React$Component) {
   _createClass(UserProfile, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile header"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "profile_header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         style: profileImage,
         src: "https://via.placeholder.com/200x200",
         alt: "profile image"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "pageHeader"
-      }, "Profile Name")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "textBox"
+      }, "James Dev")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "pre-scrollable",
+        style: {
+          height: "85%"
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "PCB design"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Welding"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "UX design"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Engineering")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A picture of a project they worked on:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          height: 150,
+          width: "auto"
+        },
         src: "http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg",
         alt: "uploaded picture"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wire"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fibreglass"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "3D Printer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Heat Gun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Drone"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        className: "nav"
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wire"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fibreglass"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "3D Printer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Heat Gun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Drone"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -491,33 +498,10 @@ function Signupbox() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Userbox; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return UserBox; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _UserCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserCard */ "./client/components/UserCard.jsx");
- // Components
-
-
-function Userbox() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "gallery of users goes here"));
-}
-
-/***/ }),
-
-/***/ "./client/components/UserCard.jsx":
-/*!****************************************!*\
-  !*** ./client/components/UserCard.jsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return UserCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -536,36 +520,94 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+ // Components
 
 
-var UserCard =
+
+var UserBox =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(UserCard, _React$Component);
+  _inherits(UserBox, _React$Component);
 
-  function UserCard() {
-    _classCallCheck(this, UserCard);
+  function UserBox(props) {
+    var _this;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(UserCard).apply(this, arguments));
+    _classCallCheck(this, UserBox);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserBox).call(this, props));
+    _this.state = {
+      demoUsers: [{
+        name: "Tim",
+        skill: "Drone Pilot",
+        profilePic: ""
+      }, {
+        name: "Sarah",
+        skill: "Circuitry Design",
+        profilePic: ""
+      }]
+    };
+    return _this;
   }
 
-  _createClass(UserCard, [{
+  _createClass(UserBox, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "card-img"
-      })));
+        className: "col-6"
+      }, this.state.demoUsers.map(function (user) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          name: user.name,
+          skill: user.skill,
+          profilePic: user.profilePic
+        });
+      }));
     }
   }]);
 
-  return UserCard;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+  return UserBox;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // export default function Userbox () {
+//   return (
+//     <div className="col-6">
+//     {this.state.demoUsers.map((user) => {
+//       <UserCard name={user.name} skill={user.skill} profilePic={user.profilePic} />
+//     })}
+//     </div>
+//   )
+// }
 
 
+
+
+/***/ }),
+
+/***/ "./client/components/UserCard.jsx":
+/*!****************************************!*\
+  !*** ./client/components/UserCard.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var UserCard = function UserCard(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "card-img"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    class: "card-title"
+  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    class: "card-text"
+  }, props.skill)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (UserCard);
 
 /***/ }),
 

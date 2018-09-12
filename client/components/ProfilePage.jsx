@@ -16,12 +16,12 @@ const profileImage = {
 export default class UserProfile extends React.Component {
   render () {
     return (
-      <div>
-        <div className="profile header">
+      <div className="container">
+        <div className="profile_header">
           <img style={profileImage} src="https://via.placeholder.com/200x200" alt="profile image"/>
-          <h2 className="pageHeader">Profile Name</h2>
+          <h2 className="pageHeader">James Dev</h2>
         </div>
-        <div className="textBox">
+        <div className="pre-scrollable" style={{height: "85%"}}>
           <p>Some skills that they have:</p>
 
           <ul>
@@ -31,7 +31,7 @@ export default class UserProfile extends React.Component {
             <li>Engineering</li>
           </ul>
           <p>A picture of a project they worked on:</p>
-          <img src="http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg" alt="uploaded picture"/>
+          <img style={{height: 150, width: "auto"}} src="http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg" alt="uploaded picture"/>
           <p>A list of some of their equipment:</p>
           <ul>
             <li>Wire</li>
@@ -41,7 +41,7 @@ export default class UserProfile extends React.Component {
             <li>Drone</li>
           </ul>
         </div>
-        <Nav className="nav"/>
+        <Nav />
       </div>
     )
   }

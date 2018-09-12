@@ -3,13 +3,13 @@
   text-align: center;
 }
 
-.profile.header {
+.profile_header {
   position: sticky;
+  background-color: aquamarine;
 }
 
 .textBox {
   max-height: 70%;
-  overflow: auto;
 }
 
 /* sets the max width of the form container */
@@ -17,9 +17,9 @@
   max-width: 500px
 }
 
-nav{
-  position: absolute;
-  bottom: 0;
+.nav{
+height: 50px;
+background-image: linear-gradient(to bottom right, rgba(77, 77, 196, 0.904), rgba(50, 50, 50, 0.8))
 }
 
 .phone.button {
