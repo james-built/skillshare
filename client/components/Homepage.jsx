@@ -16,14 +16,14 @@ export default class Homepage extends React.Component {
       <div className="container">
         <img className="row" style={homepagePicture} src="https://via.placeholder.com/375x460"/>
         <div className="row">
-          <p className="col-sm">
+          <p className="col-6">
           Where ideas meet execution.<br/><br/>
           Find the complement to your skillset to help bring
           your vision to reality.<br/><br/>
           Apply your skills to real world
           projects to grow & develop.
           </p>
-          <UserBox style={{flexGrow: 1}}/>
+          <UserBox />
         </div>
         <Signupbox />
       </div>
