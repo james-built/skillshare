@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Userbox from './Userbox'
+import UserBox from './UserBox'
 import Signupbox from './Signupbox'
 
 // Styles
@@ -23,7 +23,7 @@ export default class Homepage extends React.Component {
           Apply your skills to real world
           projects to grow & develop.
           </p>
-          <Userbox style={{flexGrow: 1}}/>
+          <UserBox style={{flexGrow: 1}}/>
         </div>
         <Signupbox />
       </div>

@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 export default function Signupbox () {
   return (
     <div className="row">
-      <Link to='/user/profile' className="col-sm"><button id="sign-in" >sign-in</button></Link>
-      <button id="register" className="col-sm">register</button>
+      <div className="col-6"><Link to="/user/profile" ><button className="phone button">sign-in</button></Link></div>
+      <div className="col-6"><button id="register" className="phone button">register</button></div>
     </div>
   )
 }

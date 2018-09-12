@@ -19,3 +19,7 @@ nav{
   position: absolute;
   bottom: 0;
 }
+
+.phone.button {
+  width: 100%
+}
