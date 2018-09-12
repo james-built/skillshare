@@ -34,11 +34,11 @@ export default class UserProfile extends React.Component {
           <img src="http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg" alt="uploaded picture"/>
           <p>A list of some of their equipment:</p>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Wire</li>
+            <li>Fibreglass</li>
+            <li>3D Printer</li>
+            <li>Heat Gun</li>
+            <li>Drone</li>
           </ul>
         </div>
         <Nav className="nav"/>

@@ -1,5 +1,14 @@
 import React from 'react'
 
+// Components
+import Nav from './Nav'
+
+// Styles
+const signupPicture = {
+  height: 460,
+  width: '100%'
+}
+
 export default class UserSignup extends React.Component {
   constructor (props) {
     super(props)
@@ -10,14 +19,34 @@ export default class UserSignup extends React.Component {
       phoneNumber: ''
     }
   }
+
+  handleSubmit () {
+
+  }
+
   render () {
     return (
       <div>
-        <label for="name">Name: </label>
-        <input id="name" />
-        <input className="username" >Username: </input>
-        <input className="email" >Email: </input>
-        <input className="phoneNumber" >Phone Number: </input>
+        <img style={signupPicture} src="https://via.placeholder.com/375x460" />
+        <div className="form container">
+          <div className="row justify-content-around">
+            <label className="col-2">Name:</label>
+            <input className="col-6"/>
+          </div>
+          <div className="row justify-content-around">
+            <label className="col-2">Username:</label>
+            <input className="col-6"/>
+          </div>
+          <div className="row justify-content-around">
+            <label className="col-2">Email:</label>
+            <input className="col-6"/>
+          </div>
+          <div className="row justify-content-around">
+            <label className="col-2">Phone Number:</label>
+            <input className="col-6"/>
+          </div>
+        </div>
+        <Nav className="nav" />
       </div>
     )
   }

@@ -12,7 +12,9 @@
   overflow: auto;
 }
 
-.textScroll {
+/* sets the max width of the form container */
+.form.container {
+  max-width: 500px
 }
 
 nav{
@@ -22,4 +24,9 @@ nav{
 
 .phone.button {
   width: 100%
+}
+
+/* User signup styles */
+.signup {
+
 }
