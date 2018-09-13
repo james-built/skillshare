@@ -41,5 +41,6 @@ background-color: #CACAAA;
     rgba(0, 0, 0, 0.5)
   ),
   url(http://www.eclectictrends.com/wp-content/uploads/2016/07/jim-golden-studio.jpg);
-  background-size: auto
+  background-size: auto;
+  background-position: center;
 }

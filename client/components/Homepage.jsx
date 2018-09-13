@@ -10,14 +10,22 @@ const homepagePicture = {
   width: '100%',
   fontFamily: 'Black Ops One, cursive',
   fontSize: '2rem',
-  color: 'white'
+  color: 'white',
+  display: 'flex',
+  alignItems: 'center'
 }
-
+const homepageTitle = {
+  fontWeight: '9',
+  fontSize: '2em',
+  color: '#8A717B',
+  textAlign: 'center',
+  webkitTextStroke: '2px #B19E83'
+}
 export default class Homepage extends React.Component {
   render () {
     return (
       <div>
-        <div className="img-fluid homepageImage" style={homepagePicture}><p className="">Skill Share</p></div>
+        <div className="img-fluid homepageImage" style={homepagePicture}><p style={homepageTitle}>Skill Share</p></div>
         <div className="container">
           <div className="row">
             <p className="col-6">
