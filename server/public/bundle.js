@@ -470,7 +470,9 @@ function (_React$Component) {
 
     _this.state = {
       name: '',
+      about: '',
       skills: [],
+      equipment: [],
       profilePic: ''
     };
     return _this;
@@ -487,29 +489,38 @@ function (_React$Component) {
         id: 1,
         name: 'Tim',
         skills: ['Drone Pilot', 'Battlebot Design', 'Hotdog Eating Champion'],
+        equipment: ['Batteries', 'Soldering Iron', 'Crimping Pliers'],
         profilePic: 'https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg',
-        projectPic: 'https://media.wired.com/photos/5ae226425581121251d2feb0/master/pass/battlebots-598125354.jpg'
+        projectPic: 'https://media.wired.com/photos/5ae226425581121251d2feb0/master/pass/battlebots-598125354.jpg',
+        about: "Hi, I'm Tim and I race drones for fun. I have a collection of battlebots I have designed and built from scratch and have entered them in a number of contests. If you need help doing anything mechanical or electrical I have the skills to help you out. I want to work with others who have programming experience so I can progress my personal project of building a sentient robot army."
       }, {
         id: 2,
         name: 'Sarah',
         skills: ['Circuitry Design', 'Futuristic Horticulture', 'Laser Eye Beams'],
+        equipment: ['Fertiliser', 'Pruning Shears', 'Garden Rake'],
         profilePic: 'https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg',
         projectPic: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/growing-tomatoes-1521837077.jpg?crop=1.00xw:1.00xh;0,0&resize=480:*'
       }, {
         id: 3,
         name: 'Angela',
         skills: ['CAD', 'Animal Welfare Specialist', 'Gun Safety'],
-        profilePic: 'https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg'
+        equipment: ['3D Scanner', 'Wire Brush', 'Barcode Scanner'],
+        profilePic: 'https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg',
+        projectPic: 'https://www.shoppingzoneplus.com/media/catalog/product/cache/1/image/500x500/9df78eab33525d08d6e5fb8d27136e95/w/a/wall-e1.jpg'
       }, {
         id: 4,
         name: 'Paul',
         skills: ['Carpentry', 'Toasted Sandwich Maker', 'Rapid Prototyping'],
-        profilePic: 'https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg'
+        equipment: ['3D Scanner', 'Wire Brush', 'Barcode Scanner'],
+        profilePic: 'https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg',
+        projectPic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkTPAaNG7HbLLPkNWMS9-ZrQFecApNzgzfgnymNdvrztGWl6De'
       }];
       demoUsers.map(function (_ref) {
         var id = _ref.id,
             name = _ref.name,
             skills = _ref.skills,
+            equipment = _ref.equipment,
+            about = _ref.about,
             profilePic = _ref.profilePic,
             projectPic = _ref.projectPic;
 
@@ -517,6 +528,8 @@ function (_React$Component) {
           _this2.setState({
             name: name,
             skills: skills,
+            equipment: equipment,
+            about: about,
             profilePic: profilePic,
             projectPic: projectPic
           });
@@ -536,21 +549,26 @@ function (_React$Component) {
         alt: "profile image"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "pageHeader"
-      }, this.state.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pre-scrollable",
         style: {}
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), this.state.skills.map(function (skill, x) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.skills.map(function (skill, x) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: x
         }, skill);
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A picture of a project they worked on:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A picture of a project they worked on:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         style: {
           height: 150,
-          width: 'auto'
+          width: 'auto',
+          marginBottom: '10px'
         },
         src: this.state.projectPic,
         alt: "uploaded picture"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wire"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fibreglass"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "3D Printer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Heat Gun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Drone"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.equipment.map(function (item, j) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: j
+        }, item);
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
