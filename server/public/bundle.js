@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Homepage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Homepage */ "./client/components/Homepage.jsx");
 /* harmony import */ var _ProfilePage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProfilePage */ "./client/components/ProfilePage.jsx");
 /* harmony import */ var _UserHomepage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UserHomepage */ "./client/components/UserHomepage.jsx");
-/* harmony import */ var _UserRegistration__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./UserRegistration */ "./client/components/UserRegistration.jsx");
+/* harmony import */ var _UserRegistration__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UserRegistration */ "./client/components/UserRegistration.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -149,7 +149,7 @@ function (_React$Component) {
         component: _Homepage__WEBPACK_IMPORTED_MODULE_2__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/user/register",
-        component: _UserRegistration__WEBPACK_IMPORTED_MODULE_6__["default"]
+        component: _UserRegistration__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/user/profile/:id",
         component: _ProfilePage__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -266,9 +266,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var homepagePicture = {
   height: 460,
   width: '100%',
-  fontFamily: 'Alfa Slab One, cursive',
+  fontFamily: 'Black Ops One, cursive',
   fontSize: '2rem',
-  color: 'white'
+  color: 'white',
+  display: 'flex',
+  alignItems: 'center'
+};
+var homepageTitle = {
+  fontWeight: '9',
+  fontSize: '2em',
+  color: '#8A717B',
+  textAlign: 'center',
+  webkitTextStroke: '2px #B19E83'
 };
 
 var Homepage =
@@ -289,7 +298,7 @@ function (_React$Component) {
         className: "img-fluid homepageImage",
         style: homepagePicture
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: ""
+        style: homepageTitle
       }, "Skill Share")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -319,6 +328,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Nav; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -329,13 +339,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -344,19 +355,52 @@ var Nav =
 function (_React$Component) {
   _inherits(Nav, _React$Component);
 
-  function Nav() {
+  function Nav(props) {
+    var _this;
+
     _classCallCheck(this, Nav);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Nav).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Nav).call(this, props));
+    _this.state = {
+      toggleNav: 'none'
+    };
+    _this.toggleNav = _this.toggleNav.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
   }
 
   _createClass(Nav, [{
+    key: "toggleNav",
+    value: function toggleNav() {
+      if (this.state.toggleNav === 'none') {
+        this.setState({
+          toggleNav: 'block'
+        });
+      } else {
+        this.setState({
+          toggleNav: 'none'
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return (// this will popup the site nav menu
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            display: this.state.toggleNav,
+            bottom: '20px'
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/user/projects"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Your Projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/user/collaborations"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Your Collaborations"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "fixed-bottom nav justify-content-center"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Navigate"))
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: this.toggleNav
+        }, "Navigate")))
       );
     }
   }]);
@@ -409,30 +453,8 @@ var profileImage = {
   marginLeft: 'auto',
   marginRight: 'auto',
   width: '30%',
-  borderRadius: '50%' // Demo data
-
+  borderRadius: '100%'
 };
-var demoUsers = [{
-  id: 1,
-  name: "Tim",
-  skill: "Drone Pilot",
-  profilePic: "https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg"
-}, {
-  id: 2,
-  name: "Sarah",
-  skill: "Circuitry Design",
-  profilePic: "https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg"
-}, {
-  id: 3,
-  name: "Angela",
-  skill: "CAD",
-  profilePic: "https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg"
-}, {
-  id: 4,
-  name: "Paul",
-  skill: "Carpentry",
-  profilePic: "https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg"
-}];
 
 var UserProfile =
 /*#__PURE__*/
@@ -444,41 +466,109 @@ function (_React$Component) {
 
     _classCallCheck(this, UserProfile);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserProfile).call(this, props)); //This state will be filled with the user data from API call
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserProfile).call(this, props)); // This state will be filled with the user data from API call
 
-    var selectedUser = _this.props.match.params.id;
-    demoUsers.map(function (selectedUser) {});
-    _this.state = {};
+    _this.state = {
+      name: '',
+      about: '',
+      skills: [],
+      equipment: [],
+      profilePic: ''
+    };
     return _this;
-  }
+  } // To be replaced with an API call
+
 
   _createClass(UserProfile, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var selectedUser = Number(this.props.match.params.id);
+      var demoUsers = [{
+        id: 1,
+        name: 'Tim',
+        skills: ['Drone Pilot', 'Battlebot Design', 'Hotdog Eating Champion'],
+        equipment: ['Batteries', 'Soldering Iron', 'Crimping Pliers'],
+        profilePic: 'https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg',
+        projectPic: 'https://media.wired.com/photos/5ae226425581121251d2feb0/master/pass/battlebots-598125354.jpg',
+        about: "Hi, I'm Tim and I race drones for fun. I have a collection of battlebots I have designed and built from scratch and have entered them in a number of contests. If you need help doing anything mechanical or electrical I have the skills to help you out. I want to work with others who have programming experience so I can progress my personal project of building a sentient robot army."
+      }, {
+        id: 2,
+        name: 'Sarah',
+        skills: ['Circuitry Design', 'Futuristic Horticulture', 'Laser Eye Beams'],
+        equipment: ['Fertiliser', 'Pruning Shears', 'Garden Rake'],
+        profilePic: 'https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg',
+        projectPic: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/growing-tomatoes-1521837077.jpg?crop=1.00xw:1.00xh;0,0&resize=480:*'
+      }, {
+        id: 3,
+        name: 'Angela',
+        skills: ['CAD', 'Animal Welfare Specialist', 'Gun Safety'],
+        equipment: ['3D Scanner', 'Wire Brush', 'Barcode Scanner'],
+        profilePic: 'https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg',
+        projectPic: 'https://www.shoppingzoneplus.com/media/catalog/product/cache/1/image/500x500/9df78eab33525d08d6e5fb8d27136e95/w/a/wall-e1.jpg'
+      }, {
+        id: 4,
+        name: 'Paul',
+        skills: ['Carpentry', 'Toasted Sandwich Maker', 'Rapid Prototyping'],
+        equipment: ['3D Scanner', 'Wire Brush', 'Barcode Scanner'],
+        profilePic: 'https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg',
+        projectPic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkTPAaNG7HbLLPkNWMS9-ZrQFecApNzgzfgnymNdvrztGWl6De'
+      }];
+      demoUsers.map(function (_ref) {
+        var id = _ref.id,
+            name = _ref.name,
+            skills = _ref.skills,
+            equipment = _ref.equipment,
+            about = _ref.about,
+            profilePic = _ref.profilePic,
+            projectPic = _ref.projectPic;
+
+        if (id === selectedUser) {
+          _this2.setState({
+            name: name,
+            skills: skills,
+            equipment: equipment,
+            about: about,
+            profilePic: profilePic,
+            projectPic: projectPic
+          });
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(this.state);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
+        className: ""
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "profile_header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         style: profileImage,
-        src: "https://via.placeholder.com/200x200",
+        src: this.state.profilePic,
         alt: "profile image"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "pageHeader"
-      }, this.state.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.state.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pre-scrollable",
-        style: {
-          height: "85%"
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "PCB design"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Welding"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "UX design"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Engineering")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A picture of a project they worked on:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {}
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.skills.map(function (skill, x) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: x
+        }, skill);
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A picture of a project they worked on:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         style: {
           height: 150,
-          width: "auto"
+          width: 'auto',
+          marginBottom: '10px'
         },
-        src: "http://cuelloconstruction.com/wp-content/uploads/2011/12/custom-carpentry.jpg",
+        src: this.state.projectPic,
         alt: "uploaded picture"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wire"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fibreglass"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "3D Printer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Heat Gun"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Drone"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A list of some of their equipment:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.equipment.map(function (item, j) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: j
+        }, item);
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -506,20 +596,20 @@ __webpack_require__.r(__webpack_exports__);
 
 function Signupbox() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row fixed-bottom"
+    className: "fixed-bottom nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/user/home"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "phone button"
+    className: "colorButton"
   }, "sign-in"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/user/register"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "register",
-    className: "phone button"
+    className: "colorButton"
   }, "register"))));
 }
 
@@ -572,29 +662,29 @@ function (_React$Component) {
 
     _classCallCheck(this, UserBox);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserBox).call(this, props)); //This state will be filled with a selection of random users from database
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserBox).call(this, props)); // This state will be filled with a selection of random users from database
 
     _this.state = {
       demoUsers: [{
         id: 1,
-        name: "Tim",
-        skill: "Drone Pilot",
-        profilePic: "https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg"
+        name: 'Tim',
+        skill: 'Drone Pilot',
+        profilePic: 'https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg'
       }, {
         id: 2,
-        name: "Sarah",
-        skill: "Circuitry Design",
-        profilePic: "https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg"
+        name: 'Sarah',
+        skill: 'Circuitry Design',
+        profilePic: 'https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg'
       }, {
         id: 3,
-        name: "Angela",
-        skill: "CAD",
-        profilePic: "https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg"
+        name: 'Angela',
+        skill: 'CAD',
+        profilePic: 'https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg'
       }, {
         id: 4,
-        name: "Paul",
-        skill: "Carpentry",
-        profilePic: "https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg"
+        name: 'Paul',
+        skill: 'Carpentry',
+        profilePic: 'https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg'
       }]
     };
     return _this;
@@ -610,9 +700,9 @@ function (_React$Component) {
         className: "pre-scrollable"
       }, this.state.demoUsers.map(function (user) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/user/profile/".concat(user.id)
+          to: "/user/profile/".concat(user.id),
+          key: user.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          key: user.id,
           name: user.name,
           skill: user.skill,
           profilePic: user.profilePic
@@ -643,7 +733,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var UserCard = function UserCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card"
+    className: "card",
+    style: {
+      backgroundColor: 'rgba(100, 147, 153, 0.877)'
+    }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "card-img",
     src: props.profilePic
@@ -695,7 +788,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
  // Components
 
 
-
+ //
 
 var UserHomepage =
 /*#__PURE__*/
@@ -714,18 +807,31 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-between"
+        style: {
+          height: '100%'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row justify-content-between",
+        style: {
+          height: '100%'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "My Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://via.placeholder.com/100x100"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-between"
+        className: "row justify-content-between",
+        style: {
+          height: '100%'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://via.placeholder.com/100x100"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "My Collaborations")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-between"
+        className: "row justify-content-between",
+        style: {
+          height: '100%'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Browse Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://via.placeholder.com/100x100"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
