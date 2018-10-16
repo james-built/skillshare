@@ -488,15 +488,15 @@ function (_React$Component) {
       var demoUsers = [{
         id: 1,
         name: 'Tim',
-        skills: ['Drone Pilot', 'Battlebot Design', 'Hotdog Eating Champion'],
+        skills: ['Drone Pilot', 'PCB Design', 'Soldering'],
         equipment: ['Batteries', 'Soldering Iron', 'Crimping Pliers'],
         profilePic: 'https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg',
         projectPic: 'https://media.wired.com/photos/5ae226425581121251d2feb0/master/pass/battlebots-598125354.jpg',
-        about: "Hi, I'm Tim and I race drones for fun. I have a collection of battlebots I have designed and built from scratch and have entered them in a number of contests. If you need help doing anything mechanical or electrical I have the skills to help you out. I want to work with others who have programming experience so I can progress my personal project of building a sentient robot army."
+        about: "Hi, I'm Tim and I race drones for fun. I have a collection of battlebots I have designed and built from scratch and have entered them in a number of contests. If you need help doing anything mechanical or electrical I have the skills to help you out. I want to work with others who have programming experience particularly with neural networks."
       }, {
         id: 2,
         name: 'Sarah',
-        skills: ['Circuitry Design', 'Futuristic Horticulture', 'Laser Eye Beams'],
+        skills: ['Circuitry Design', 'Horticulture', 'Project Management'],
         equipment: ['Fertiliser', 'Pruning Shears', 'Garden Rake'],
         profilePic: 'https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg',
         projectPic: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/growing-tomatoes-1521837077.jpg?crop=1.00xw:1.00xh;0,0&resize=480:*'
