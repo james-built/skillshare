@@ -14,3 +14,4 @@ At present the project is using some placeholder data in the components as my fo
 ## Project Design Assets
 * [User Stories](user-stories.md)
 * [Wireframes](skillshare-wireframe.pdf)
+* [ERD](skillshareERD.jpeg)
