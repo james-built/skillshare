@@ -55,7 +55,7 @@ export default class UserProfile extends React.Component {
           <h2 className="pageHeader">{this.state.name}</h2>
         </div>
         <p>{this.state.about}</p>
-        <div className="pre-scrollable" style={{}}>
+        <div className="" style={{}}>
           <p>Some skills that they have:</p>
           <ul>
             {this.state.skills.map((skill, x) => {
@@ -72,7 +72,7 @@ export default class UserProfile extends React.Component {
             })}
           </ul>
         </div>
-        <Nav />
+      <Nav />
       </div>
     )
   }

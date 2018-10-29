@@ -539,7 +539,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "pageHeader"
       }, this.state.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.about), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pre-scrollable",
+        className: "",
         style: {}
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some skills that they have:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.skills.map(function (skill, x) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
