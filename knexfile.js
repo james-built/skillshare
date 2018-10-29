@@ -1,4 +1,13 @@
-// Update with your config settings.
+// Case conversion utility
+const {camelToSnake, snakeToCamel} = require('./util/knex-converters')
+
+const postProcessResponse = result => {
+  return Array.isArray(result)
+  ? result.map(row => snakeToCamel(row))
+  : snakeToCamel(result)
+}
+
+const wrapIdentifier = (identifier, origImpl) => origImpl(camelToSnake(identifier))
 
 module.exports = {
 
@@ -7,7 +16,9 @@ module.exports = {
     connection: {
       filename: './dev.sqlite3'
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
+    postProcessResponse,
+    wrapIdentifier
   },
 
   staging: {
@@ -23,7 +34,10 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations'
-    }
+    },
+    useNullAsDefault: true,
+    postProcessResponse,
+    wrapIdentifier
   },
 
   production: {
@@ -39,7 +53,10 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations'
-    }
+    },
+    useNullAsDefault: true,
+    postProcessResponse,
+    wrapIdentifier
   }
 
 };
