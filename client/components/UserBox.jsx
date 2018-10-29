@@ -13,19 +13,19 @@ export default class UserBox extends React.Component {
         {id: 1,
           name: 'Tim',
           skill: 'Drone Pilot',
-          profilePic: 'https://pbs.twimg.com/media/CynmmdYWgAAjky1.jpg'},
+          profilePic: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'},
         {id: 2,
           name: 'Sarah',
           skill: 'Circuitry Design',
-          profilePic: 'https://static3.depositphotos.com/1001951/142/i/950/depositphotos_1422665-stock-photo-cyber-woman-with-tomatos.jpg'},
+          profilePic: 'https://images.pexels.com/photos/157741/woman-confident-happy-confident-woman-157741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'},
         {id: 3,
           name: 'Angela',
           skill: 'CAD',
-          profilePic: 'https://thumb9.shutterstock.com/display_pic_with_logo/434191/434191,1276812066,15/stock-photo-young-attractive-dangerous-woman-aiming-at-gold-fish-55445089.jpg'},
+          profilePic: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'},
         {id: 4,
           name: 'Paul',
           skill: 'Carpentry',
-          profilePic: 'https://st2.depositphotos.com/4296911/6391/i/950/depositphotos_63917813-stock-photo-portrait-of-a-young-sexy.jpg'}
+          profilePic: 'https://images.pexels.com/photos/462680/pexels-photo-462680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'}
       ]
 
     }
