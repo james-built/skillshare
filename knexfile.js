@@ -21,6 +21,19 @@ module.exports = {
     wrapIdentifier
   },
 
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: ':memory:'
+    },
+    useNullAsDefault: true,
+    postProcessResponse,
+    wrapIdentifier,
+    seeds: {
+      directory: './tests/seeds'
+    }
+  },
+
   staging: {
     client: 'postgresql',
     connection: {
