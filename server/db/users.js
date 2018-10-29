@@ -7,7 +7,8 @@ getUsersProjects
 
 function getUser (id, db = connection) {
   return db('users')
-    .where('id', id)
+    .join('projects', 'users.id', 'projects.user_id')
+    .where('userId', id)
     .first()
 }
 
