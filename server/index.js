@@ -1,8 +1,12 @@
-const server = require('./server')
+const path = require('path')
+const express = require('express')
 
-const port = 3000
+const users = require('./routes/users')
 
-server.listen(port, () => {
-  // eslint-disable-next-line no-console
-  console.log('Server listening on port', port)
-})
+const server = express()
+
+server.use(express.static(path.join(__dirname, 'public')))
+
+server.use('/api/v1/users', users)
+
+module.exports = server

@@ -7,7 +7,7 @@
   "author": "james-built <jgbuilt@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server & yarn build --watch",
+    "dev": "nodemon index & yarn build --watch",
     "build": "webpack --config client/webpack.config.js",
     "test": "jest"
   },
