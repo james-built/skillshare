@@ -16,8 +16,9 @@ test('knex camelCase conversion works', () => {
   return db.getUser(1001, testDb)
     .then(user => {
       let fields = Object.keys(user)
+      // eslint-disable-next-line no-console
       console.log(fields)
-      for(i in fields){
+      for (let i in fields) {
         expect(i).not.toMatch(/_/)
       }
     })

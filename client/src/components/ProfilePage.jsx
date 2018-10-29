@@ -31,7 +31,7 @@ export default class UserProfile extends React.Component {
     const selectedUser = Number(this.props.match.params.id)
     request
       .get(`/api/v1/users/get-user/${selectedUser}`)
-      .then( res => {
+      .then(res => {
         let user = res.body.user
         this.setState({
           name: user.name,
@@ -43,7 +43,7 @@ export default class UserProfile extends React.Component {
         })
       })
       .catch(err => {
-        err.message
+        return err.message
       })
   }
 
@@ -72,7 +72,7 @@ export default class UserProfile extends React.Component {
             })}
           </ul>
         </div>
-      <Nav />
+        <Nav />
       </div>
     )
   }
