@@ -1,4 +1,5 @@
 import React from 'react'
+import request from 'superagent'
 
 // Components
 import Nav from './Nav'

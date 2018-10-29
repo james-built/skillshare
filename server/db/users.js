@@ -1,13 +1,14 @@
 const connection = require('./')
 
 module.exports = {
-getUsers,
+getUser,
 getUsersProjects
 }
 
-function getUsers (db = connection) {
+function getUser (id, db = connection) {
   return db('users')
-    .select()
+    .where('id', id)
+    .first()
 }
 
 function getUsersProjects (db = connection) {
