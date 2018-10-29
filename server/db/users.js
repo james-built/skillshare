@@ -12,6 +12,6 @@ function getUsers (db = connection) {
 
 function getUsersProjects (db = connection) {
   return db('users')
-    .join('projects', 'id', 'projects.user_id')
+    .join('projects', 'users.id', 'projects.user_id')
     .select()
 }
