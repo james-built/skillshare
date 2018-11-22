@@ -522,7 +522,7 @@ function (_React$Component) {
           projectPic: user.projectImage
         });
       }).catch(function (err) {
-        err.message;
+        return err.message;
       });
     }
   }, {
