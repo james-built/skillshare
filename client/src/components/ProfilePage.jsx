@@ -14,6 +14,12 @@ const profileImage = {
   borderRadius: '100%'
 }
 
+// @flow
+
+function testFlow(a: number): string {
+  return a.length
+}
+
 export default class UserProfile extends React.Component {
   constructor (props) {
     super(props)
