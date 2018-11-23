@@ -21,7 +21,9 @@ const homepageTitle = {
   textAlign: 'center',
   webkitTextStroke: '2px #B19E83'
 }
+
 export default class Homepage extends React.Component {
+  
   render () {
     return (
       <div>

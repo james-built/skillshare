@@ -1,8 +1,8 @@
 const connection = require('./')
 
 module.exports = {
-getUser,
-getUsersProjects
+  getUser,
+  getUsersProjects
 }
 
 function getUser (id, db = connection) {
