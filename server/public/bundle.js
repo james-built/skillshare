@@ -103,7 +103,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _src_components_App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/components/App */ "./client/src/components/App.jsx");
 /* harmony import */ var _src_reducers_users__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/reducers/users */ "./client/src/reducers/users.js");
-/* harmony import */ var _src_reducers_users__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_src_reducers_users__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -111,12 +110,64 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var reducers = Object(redux__WEBPACK_IMPORTED_MODULE_3__["combineReducers"])({
-  users: _src_reducers_users__WEBPACK_IMPORTED_MODULE_5___default.a
+  users: _src_reducers_users__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 var store = Object(redux__WEBPACK_IMPORTED_MODULE_3__["createStore"])(reducers);
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
   store: store
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_components_App__WEBPACK_IMPORTED_MODULE_4__["default"], null)), document.getElementById('app'));
+
+/***/ }),
+
+/***/ "./client/src/actions/users.js":
+/*!*************************************!*\
+  !*** ./client/src/actions/users.js ***!
+  \*************************************/
+/*! exports provided: REQUEST_USERS, RECEIVE_USERS, RECEIVE_USERS_ERROR, requestUsers, receiveUsers, handleError, fetchUsers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REQUEST_USERS", function() { return REQUEST_USERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USERS", function() { return RECEIVE_USERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USERS_ERROR", function() { return RECEIVE_USERS_ERROR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestUsers", function() { return requestUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUsers", function() { return receiveUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "handleError", function() { return handleError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsers", function() { return fetchUsers; });
+/* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
+/* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
+
+var REQUEST_USERS = 'REQUEST_USERS';
+var RECEIVE_USERS = 'RECEIVE_USERS';
+var RECEIVE_USERS_ERROR = 'RECEIVE_USERS_ERROR';
+var requestUsers = function requestUsers() {
+  return {
+    type: REQUEST_USERS
+  };
+};
+var receiveUsers = function receiveUsers(users) {
+  return {
+    type: RECEIVE_USERS,
+    users: users
+  };
+};
+var handleError = function handleError(error) {
+  return {
+    type: RECEIVE_USERS_ERROR,
+    error: error
+  };
+};
+var fetchUsers = function fetchUsers() {
+  return function (dispatch) {
+    dispatch(requestUsers());
+    superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/users/get-sample-users').then(function (res) {
+      return dispatch(receiveUsers(res.data.users));
+    }).catch(function (err) {
+      return dispatch(handleError(err.message));
+    });
+  };
+};
 
 /***/ }),
 
@@ -954,10 +1005,50 @@ function (_React$Component) {
 /*!**************************************!*\
   !*** ./client/src/reducers/users.js ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_users__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/users */ "./client/src/actions/users.js");
 
+var defaultState = {
+  users: [],
+  error: null,
+  ready: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+
+  var _ref = arguments.length > 1 ? arguments[1] : undefined,
+      type = _ref.type,
+      users = _ref.users,
+      error = _ref.error;
+
+  switch (type) {
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["REQUEST_USERS"]:
+      return {
+        error: null,
+        ready: false
+      };
+
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_USERS"]:
+      return {
+        error: null,
+        ready: true,
+        users: users
+      };
+
+    case _actions_users__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_USERS_ERROR"]:
+      return {
+        error: error,
+        ready: false
+      };
+
+    default:
+      return state;
+  }
+});
 
 /***/ }),
 
