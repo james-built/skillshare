@@ -114,11 +114,9 @@ var reducers = Object(redux__WEBPACK_IMPORTED_MODULE_3__["combineReducers"])({
   users: _src_reducers_users__WEBPACK_IMPORTED_MODULE_5___default.a
 });
 var store = Object(redux__WEBPACK_IMPORTED_MODULE_3__["createStore"])(reducers);
-document.addEventListener('DOMContentLoaded', function () {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
-    store: store
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_components_App__WEBPACK_IMPORTED_MODULE_4__["default"], null)), document.getElementById('app'));
-});
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
+  store: store
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_components_App__WEBPACK_IMPORTED_MODULE_4__["default"], null)), document.getElementById('app'));
 
 /***/ }),
 
