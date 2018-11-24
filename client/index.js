@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { combineReducers } from 'redux'
+import { combineReducers, createStore } from 'redux'
 
 import App from './src/components/App'
 import users from './src/reducers/users'
