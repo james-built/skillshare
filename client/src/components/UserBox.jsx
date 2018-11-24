@@ -1,10 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { connect } from 'react-redux' 
+
+import { fetchUsers } from '../actions/users'
+
 
 // Components
 import UserCard from './UserCard'
 
-export default class UserBox extends React.Component {
+class UserBox extends React.Component {
   constructor (props) {
     super(props)
     // This state will be filled with a selection of random users from database
@@ -27,10 +31,13 @@ export default class UserBox extends React.Component {
           skill: 'Carpentry',
           profilePic: 'https://images.pexels.com/photos/462680/pexels-photo-462680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'}
       ]
-
     }
   }
   // Add a function to get random selection of users
+
+  componentDidMount () {
+    fetchUsers()
+  }
 
   render () {
     return (
@@ -46,3 +53,12 @@ export default class UserBox extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    users: state.users,
+    ready: state.users.ready
+  }
+}
+
+export default connect(mapStateToProps)(UserBox)
