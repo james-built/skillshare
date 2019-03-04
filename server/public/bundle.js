@@ -158,16 +158,16 @@ var handleError = function handleError(error) {
     error: error
   };
 };
-var fetchUsers = function fetchUsers() {
+function fetchUsers() {
   return function (dispatch) {
     dispatch(requestUsers());
-    superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/users/get-sample-users').then(function (res) {
+    return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/v1/users/get-sample-users').then(function (res) {
       return dispatch(receiveUsers(res.data.users));
     }).catch(function (err) {
       return dispatch(handleError(err.message));
     });
   };
-};
+}
 
 /***/ }),
 

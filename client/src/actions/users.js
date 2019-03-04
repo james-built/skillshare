@@ -18,10 +18,10 @@ export const handleError = error => ({
   error
 })
 
-export const fetchUsers = () => {
+export function fetchUsers () {
   return (dispatch) => {
     dispatch(requestUsers())
-    request
+    return request
       .get('/api/v1/users/get-sample-users')
       .then(res => dispatch(receiveUsers(res.data.users)))
       .catch(err => dispatch(handleError(err.message)))

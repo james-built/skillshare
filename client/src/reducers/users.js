@@ -1,4 +1,4 @@
-import { REQUEST_USERS, RECEIVE_USERS, RECEIVE_USERS_ERROR } from '../actions/users'
+import {REQUEST_USERS, RECEIVE_USERS, RECEIVE_USERS_ERROR} from '../actions/users'
 
 const defaultState = {
   users: [],
@@ -6,7 +6,7 @@ const defaultState = {
   ready: false
 }
 
-export default function (state = defaultState, { type, users, error }) {
+export default function (state = defaultState, {type, users, error}) {
   switch (type) {
     case REQUEST_USERS:
       return {
